@@ -40,26 +40,29 @@ def listar_dados(dados):
 
 
 #Configurando a janela do Tkinter
-root = tk.Tk()
-root.title('Previsão do tempo atual')
+janela = tk.Tk()
+janela.title('Previsão do tempo atual')
 
-#Criação dos widgets interativos do app
-janela = tk.Frame(root)
-janela.pack(padx=20, pady=20)
+#Adiciona os frames na janela para a entrada dos widgets interativos do app
+frame = tk.Frame(janela)
+frame.pack(padx=20, pady=20)
 
-#widget da escolha da cidade
-label = tk.Label(janela, text = 'Digite o nome da cidade:')
+#Criando um quadro de texto com a mensagem 'Digite o nome da cidade'
+label = tk.Label(frame, text = 'Digite o nome da cidade:')
 label.pack
 
-cidade_entry = tk.Entry(janela)
+#Adicionando a caixa de texto 'Digite o nome da cidade' no frame criado na janela
+cidade_entry = tk.Entry(frame)
 cidade_entry.pack()
 
 #Criação do botao para buscar os dados
-buscar_button = tk.Button(janela, text = 'Buscar Dados do Tempo', command = checar_tempo)
+buscar_button = tk.Button(frame, text = 'Buscar Dados do Tempo', command = checar_tempo)
+
+#Adicionando o botão criado no frame
 buscar_button.pack()
 
-resultado = tk.Text(janela, wrap=tk.WORD, width=60, height=20, state="disabled")
+resultado = tk.Text(frame, wrap=tk.WORD, width=60, height=20, state="disabled")
 resultado.pack()
 
-#Roda o app
-root.mainloop()
+#Iniciar o Programa
+janela.mainloop()
