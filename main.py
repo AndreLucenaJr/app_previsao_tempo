@@ -12,7 +12,7 @@ API_key = '1a05332c99683ae41d8eb54519e6d058'
 
 #Funcão criada pra checar os dados do tempo baseado na cidade escolhida
 def checar_tempo():
-    cidade = input('Digite uma cidade: ')
+    cidade = cidade_entry.get()
     base_url = 'https://api.openweathermap.org/data/2.5/weather?appid='+ API_key + '&q='+ cidade
 
     #checar por possiveis erros usando try e except
@@ -44,10 +44,22 @@ root = tk.Tk()
 root.title('Previsão do tempo atual')
 
 #Criação dos widgets interativos do app
-frame = tk.Frame(root)
-frame.pack(padx=20, pady=20)
+janela = tk.Frame(root)
+janela.pack(padx=20, pady=20)
 
 #widget da escolha da cidade
-label = tk.Label(frame, text = 'Digite o nome da cidade:')
+label = tk.Label(janela, text = 'Digite o nome da cidade:')
 label.pack
 
+cidade_entry = tk.Entry(janela)
+cidade_entry.pack()
+
+#Criação do botao para buscar os dados
+buscar_button = tk.Button(janela, text = 'Buscar Dados do Tempo', command = checar_tempo)
+buscar_button.pack()
+
+resultado = tk.Text(janela, wrap=tk.WORD, width=60, height=20, state="disabled")
+resultado.pack()
+
+#Roda o app
+root.mainloop()
