@@ -39,7 +39,15 @@ def listar_dados(dados):
     resultado.config(state="disabled")
 
 
+#Configurando a janela do Tkinter
+root = tk.Tk()
+root.title('Previsão do tempo atual')
 
-#printa os dados do tempo da cidade escolhidda
-pprint(dados_tempo)
- 
+#Criação dos widgets interativos do app
+frame = tk.Frame(root)
+frame.pack(padx=20, pady=20)
+
+#widget da escolha da cidade
+label = tk.Label(frame, text = 'Digite o nome da cidade:')
+label.pack
+
