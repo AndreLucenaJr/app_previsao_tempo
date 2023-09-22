@@ -1,6 +1,8 @@
 #todos os importes
 import requests
 from pprint import pprint
+import tkinter as tk
+from tkinter import messagebox
 
 API_key = '1a05332c99683ae41d8eb54519e6d058'
 
@@ -12,5 +14,6 @@ base_url = 'https://api.openweathermap.org/data/2.5/weather?appid='+ API_key + '
 #tranformando o resposta do base_url em json
 dados_tempo = requests.get(base_url).json()
 
+#printa os dados do tempo da cidade escolhidda
 pprint(dados_tempo)
  
