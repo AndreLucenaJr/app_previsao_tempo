@@ -12,5 +12,6 @@ O aplicativo utiliza a API OpenWeatherMap para obter os dados do tempo atual.
 Ele exibe informações como nome da cidade, país, temperatura, condição climática, umidade e pressão.
 Erros durante a busca são tratados e exibem uma mensagem de erro.
 
+# APP Funcionando
 
 ![Texto Alternativo](https://i.imgur.com/Af6ZZIe.png)
