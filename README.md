@@ -13,4 +13,4 @@ Ele exibe informações como nome da cidade, país, temperatura, condição clim
 Erros durante a busca são tratados e exibem uma mensagem de erro.
 
 
-![Texto Alternativo](https://imgur.com/Af6ZZIe)
+![Texto Alternativo](https://i.imgur.com/Af6ZZIe.png)
