@@ -3,11 +3,15 @@ import requests
 from pprint import pprint
 import tkinter as tk
 from tkinter import messagebox
-
+import os
 
 #Configuração da API key
-API_key = '1a05332c99683ae41d8eb54519e6d058'
+API_key = os.environ.get('API_KEY')
 
+
+#Verifica se ela existe
+if not API_key:
+    raise ValueError("Oh não! A chave secreta sumiu!")
 
 
 #Funcão criada pra checar os dados do tempo baseado na cidade escolhida
